@@ -17,13 +17,13 @@ function Gallery() {
   const images = [ pet1, pet2, pet3, pet4, pet5, pet6, pet7, pet8, pet9, pet10, pet11, pet12];
   const [hoveredIndex, setHoveredIndex] = useState(null); // keep track of which image is currently being hovered over
     return (
-      <div className='gallery'>
-        <h1>Gallery</h1>
+      <div className='gallery-container'>
+        <h1 >Gallery</h1>
         <div className='image-grid'>
           {images.map((image, index) => (
             <div 
               key = {index} 
-                className = {`image-item ${hoveredIndex === index ? '' : 'dim'} `} // add the 'dim' class to all images that aren't currently being hovered over
+                className = {`image-item ${hoveredIndex === index ? 'enlarge' : 'dim' } `} // add the 'dim' class to all images that aren't currently being hovered over
                 onMouseOver = {() => setHoveredIndex(index)}  // when this image is hovered over, update hoveredIndex to this image's index
                 onMouseOut = {() => setHoveredIndex(null)} // when this image is no longer hovered over
                 >
