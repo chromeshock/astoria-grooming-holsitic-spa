@@ -18,7 +18,7 @@ function Gallery() {
   const [hoveredIndex, setHoveredIndex] = useState(null); // keep track of which image is currently being hovered over
     return (
       <div className='gallery-container'>
-        <h1 >Gallery</h1>
+        <h1>Gallery</h1>
         <div className='image-grid'>
           {images.map((image, index) => (
             <div 
