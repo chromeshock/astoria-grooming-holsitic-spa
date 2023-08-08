@@ -1,5 +1,5 @@
 import React from 'react';
-import astoriaPetGrooming_v2 from '../images/astoriaPetGrooming_v2.jpg';
+import astoriaPetGrooming_v2 from '../facility-images/astoriaPetGrooming_v2.jpg';
 
 const Home = () => {
     return (
