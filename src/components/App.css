@@ -198,10 +198,15 @@ td {
     border-bottom: 1px solid #ccc;
 }
 
-.service-name, .service-price, .service-description {
+.service-name, .service-description {
     flex: 1;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.service-price, .service-duration {
+  flex: 0.3;
+  padding: 10px;
 }
 
 .service-header {
