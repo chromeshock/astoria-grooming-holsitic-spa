@@ -1,7 +1,7 @@
 // services.js
 import React from 'react';
 import ServiceCard from './ServicesCard';
-import descriptions from './descriptions';
+import descriptions from './Descriptions';
 
 
 const services = [
@@ -39,16 +39,16 @@ const services = [
 ];
 
 const ServicesComponent = () => (
-    <div className="services-table">
-        <div className="service-header">
+    <div className="services-grid">
+       {/* <div className="service-header">
             <div className="service-name">Service Name</div>
             <div className="service-price">Price</div>
             <div className="service-duration">Duration</div>
             <div className="service-description">Description</div>
-        </div>
-         {services.map((service, index) => (
-        <ServiceCard key={index} service={service} />
-      ))}
+</div>*/}
+        {services.map((service, index) => ( 
+            <ServiceCard key={index} service={service} />
+          ))}
     </div>
 );
 

@@ -12,7 +12,7 @@ const descriptions = {
     
     item6: "Required: Certificate of  up to date vaccines. Rabies",
     
-    item7: "Required: Certificate of  up to date vaccines
+    item7: "Required: Certificate of  up to date vaccines"
     //... other descriptions
 };
 
