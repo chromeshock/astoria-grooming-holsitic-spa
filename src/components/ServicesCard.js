@@ -7,10 +7,10 @@ function ServiceCard({ service }) {
   return (
     <Card variant="outlined" style={{ marginBottom: '16px' }}>
       <CardContent>
-        <Typography variant="h5" component="div">
+        <Typography variant="h5" component="div" className="service-description-text">
           {service.name}
         </Typography>
-        <Typography variant="body2" color="textSecondary">
+        <Typography variant="body2" color="textSecondary" className="service-description-text">
           {service.description}
         </Typography>
       </CardContent>

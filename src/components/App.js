@@ -4,9 +4,8 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Contact from './components/Contact';
-import services from './components/Services';
+import Services from './components/Services';
 import Gallery from './components/Gallery';
-import ServiceCard from './components/ServicesCard';
 
 function App() {
   return (
@@ -19,14 +18,9 @@ function App() {
             <Route path="/About" element={<About />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Gallery" element={<Gallery />} />
-            <Route path="/Services" element={<services />} />
-            <Route path="/card" element={<ServiceCard />} />
+            <Route path="/Services" element={<Services />} />
           </Routes>
         </div>
-         <div>
-      <ServiceCard services={services} />
-      {/* You can render more cards by looping through your services list and rendering a ServiceCard for each service. */}
-    </div>
       </div>
     </Router>
   );
