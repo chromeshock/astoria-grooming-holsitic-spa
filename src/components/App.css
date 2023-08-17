@@ -153,37 +153,29 @@ nav a:hover {
   color: #61dafb;
 }
 
-.services-table {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border: 1px solid #ccc;
-}
-
-.service-header {
-    background-color: #f5f5f5;
-}
-
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px; /* adjust this value to set spacing between cards */
-    
+    grid-template-columns: repeat(5, 0.2fr);
 }  
 
 .service-card {
-    flex: 1 0 calc(16.6667% - 20px); /* assuming you want 20px gap */
-    margin-right: 20px;
+    padding: 5px;
     margin-left: 20px;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 20px; 
+    height: 250px;
+    width: 200px;
+    text-align: center;
 }
 
-/* To handle the right margin on every 6th element */
-.service-card:nth-child(6n) {
-    margin-right: 10px;
+.service-card .MuiTypography-root {
+    font-size: 12pt; /* Adjust this value to your preference */
 }
 
 .service-description-text {
     font-size: 10pt; /* adjust this value to your preference */
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

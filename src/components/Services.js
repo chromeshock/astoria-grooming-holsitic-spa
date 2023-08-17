@@ -1,17 +1,17 @@
 // services.js
 import React from 'react';
 import ServiceCard from './ServicesCard';
-import descriptions from './Descriptions';
+//import descriptions from './Descriptions';
 
 
 const services = [
     { name: 'Clean Ears', price: '$15', duration: '15 min', descriptions: ''},
-    { name: 'Paws Clean', price: '$20', duration: '30 min', description: descriptions.item2 },
+    { name: 'Paws Clean', price: '$20', duration: '30 min', descriptions: '' },
     { name: 'Extra Desheading', price: '$15', duration: '30 min', description: '' },
     { name: 'Face Trim', price: '$20', duration: '30 min', description: '' },
     { name: 'Cut nails', price: '$30', duration: '30 min', description: '' },
     { name: 'Nails Clipper dogs', price: '$15', duration: '10 min', description: ''},  
-    { name: 'Cats kitty lion cut', price: '$120', duration: '2 hours', description: descriptions.item1  },
+    { name: 'Cats kitty lion cut', price: '$120', duration: '2 hours', descriptions: ''  },
     { name: 'Face Trim', price: '$20', duration: '30 min', description: '' },
     { name: 'Cats, Bath, Trim Nails, Clean Ears. Short Hair', price: '$80', duration: '2 hours', description: '' },   
     { name: 'Cats, Long Hair, Bath, Trim Nails, Clean Ears, Sanitary area', price: '$100', duration: '2 hours', description: '' },   
@@ -39,13 +39,7 @@ const services = [
 ];
 
 const ServicesComponent = () => (
-    <div className="services-grid">
-       {/* <div className="service-header">
-            <div className="service-name">Service Name</div>
-            <div className="service-price">Price</div>
-            <div className="service-duration">Duration</div>
-            <div className="service-description">Description</div>
-</div>*/}
+    <div className="services-grid ">
         {services.map((service, index) => ( 
             <ServiceCard key={index} service={service} />
           ))}
