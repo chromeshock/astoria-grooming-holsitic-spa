@@ -2,31 +2,46 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { useState } from'react';
 
 function ServiceCard({ service }) {
+  const [isFlipped, setFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setFlipped(!isFlipped);
+  };
+
   return (
-    <div className="card-container">
-      <div className="card-flip">
+    <div className="card-container" onClick= {handleFlip}>
+      <div className={`card-flip ${isFlipped ? 'flipped' : ''}`}>
         <div className="card-front">
-          <Card variant="outlined">
-            <CardContent>
-              <Typography variant="h5" component="div">
-                {service.name}
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                {service.description}
-              </Typography>
-            </CardContent>
-          </Card>
-        </div>
+          <div className="service-card">
+            <Card variant="outlined">
+              <CardContent>
+                <Typography variant="h5" component="div">
+                  <p>{service.name}</p>
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                 <p>{service.price}</p>
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                 <p>{service.duration}</p>
+                </Typography>
+                <Typography variant="body2" component="div">
+                 <p>{service.details}</p> 
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
+        </div> {/* This closing div tag was missing */}
         <div className="card-back">
           <Card variant="outlined">
             <CardContent>
               <Typography variant="h5" component="div">
-                More Details
+               <p>More Details</p> 
               </Typography>
               <Typography variant="body2" color="textSecondary">
-                {service.details}
+                <p>{service.descriptions}</p>
               </Typography>
             </CardContent>
           </Card>
@@ -35,6 +50,5 @@ function ServiceCard({ service }) {
     </div>
   );
 }
-
 
 export default ServiceCard;

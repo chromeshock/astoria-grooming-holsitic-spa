@@ -1,11 +1,12 @@
 // services.js
 import React from 'react';
 import ServiceCard from './ServicesCard';
+import descriptions from './Descriptions';
 //import descriptions from './Descriptions';
 
 
 const services = [
-    { name: 'Clean Ears', price: '$15', duration: '15 min', descriptions: ''},
+    { name: 'Clean Ears', details: 'Cick for more details', price: '$15', duration: '15 min', descriptions:descriptions.item1 },
     { name: 'Paws Clean', price: '$20', duration: '30 min', descriptions: '' },
     { name: 'Extra Desheading', price: '$15', duration: '30 min', description: '' },
     { name: 'Face Trim', price: '$20', duration: '30 min', description: '' },
