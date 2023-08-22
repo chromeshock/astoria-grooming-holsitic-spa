@@ -45,29 +45,27 @@ h1 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(5 , 0.2fr);
+    grid-template-columns: repeat(5, .2fr);
+    
 } 
 
 .card-container {
-  perspective: 1000px;
-  position: relative;
-  margin: 5em 1.8em 1em 1.8em;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+  margin: 5em 1em 1em 1em;
   height: 300px;
-  width: 200px;
 }
 
-.card-container .card-flip.flipped {
-  transform: rotateY(180deg); /* Added hover effect */
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+.card-container.expanded {
+  height: auto; /* Height auto when expanded */
 }
 
-.card-flip {
-  width: 250px;
-  height: 300px;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
+/*cards formatting*/
+.card-container .MuiCardContent-root {
+  max-height: 5%;
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px;
 }
 
 .card-front,
@@ -76,21 +74,17 @@ h1 {
   width: 100%;
   height:inherit;
   backface-visibility: hidden;
-  text-align: center;
-  border: 1px solid;
   background-color: white;
+  z-index: 1;
+
 }
 
 .card-back {
   transform: rotateY(180deg);
+  position: absolute;
+
 }
  
-/*
-.service-card .MuiTypography-root {
-    font-size: 24px; 
-}
-*/
-
 /*photo gallery container*/
 .enlarge {
   animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
