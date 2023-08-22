@@ -43,16 +43,23 @@ h1 {
   100% { transform: scale(1.2) translate(0, 0); }
 }
 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(5 , 0.2fr);
+} 
+
 .card-container {
   perspective: 1000px;
   position: relative;
-  margin: 5em 2.8em 20px 2.8em;
+  margin: 5em 1.8em 1em 1.8em;
   height: 300px;
   width: 200px;
 }
 
-.card-container:hover .card-flip {
+.card-container .card-flip.flipped {
   transform: rotateY(180deg); /* Added hover effect */
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .card-flip {
@@ -77,19 +84,12 @@ h1 {
 .card-back {
   transform: rotateY(180deg);
 }
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 0.2fr);
-}  
+ 
 /*
 .service-card .MuiTypography-root {
     font-size: 24px; 
 }
 */
-.service-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 /*photo gallery container*/
 .enlarge {
@@ -201,4 +201,3 @@ nav a:hover {
 .App-link {
   color: #61dafb;
 }
-
