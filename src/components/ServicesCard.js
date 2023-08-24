@@ -30,7 +30,7 @@ function ServiceCard({ service }) {
           </Typography>
           {isExpanded && (
             <Typography variant="body2" color="textSecondary">
-              <p>{service.descriptions}</p>
+              <p className='txt-formatted'>{service.descriptions}</p>
             </Typography>
           )}
         </CardContent>

@@ -53,7 +53,7 @@ h1 {
   transition: height 0.3s ease-in-out;
   overflow: hidden;
   margin: 5em 1em 1em 1em;
-  height: 300px;
+  height: 400px;
 }
 
 .card-container.expanded {
@@ -194,4 +194,8 @@ nav a:hover {
 
 .App-link {
   color: #61dafb;
+}
+
+.txt-formatted {
+  justify-content:stretch;
 }
