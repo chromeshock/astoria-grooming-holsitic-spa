@@ -124,7 +124,7 @@ h1 {
   flex-direction:row;
   width: 100%;
   overflow: hidden;
-  margin-top: 5em;
+  margin-top: 3em;
 }
 
 ul {
@@ -229,12 +229,43 @@ nav a:hover {
 @media (max-width: 768px) {
   .hamburger-icon {
     display: flex;
-  }
+    }
+
   nav ul {
-    display: none;  /* Hide nav items */
-  }
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    }
+
   nav ul.show {
-    display: block; /* Show nav items when menu is toggled */
-    
+    max-height: 500px;  
+    opacity: 1;
+    transition: all 1s ease-in-out;
+   }
+
+  nav li {
+  display:grid;
+  grid-template-rows: repeat(5);
+  padding-top: .2px;
+  padding-bottom: .2px;
+  color: blue;
   }
+
+  /*landing page image*/
+.home-container {
+  display: flex;
+  flex-direction:row;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+  margin-top: 3em;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, .3fr);
+    margin-top: 5em;
+  } 
 }
