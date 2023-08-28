@@ -34,7 +34,7 @@ h1 {
 .dim {
   opacity: 0.5;
 }
-
+/*gallery images*/
 @keyframes shake {
   0% { transform: scale(1.2)translate(0, 0); }
   25% { transform: scale(1.2) translate(-5px, 0); }
@@ -45,25 +45,27 @@ h1 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(5, .2fr);
-    
+    grid-template-columns: repeat(4, .3fr);
+    margin-top: 5em;
 } 
 
 .card-container {
-  transition: height 0.3s ease-in-out;
+  transition: all 1s ease-in-out;
   overflow: hidden;
-  margin: 5em 1em 1em 1em;
-  height: 400px;
+  margin: 5em 3em 3em 5em;
+  height: 460px;
+  width: 350px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
 }
 
 .card-container.expanded {
-  height: auto; /* Height auto when expanded */
+  height: 690px; /* Height auto when expanded */
 }
 
 /*cards formatting*/
 .card-container .MuiCardContent-root {
-  max-height: 5%;
-  border: 1px solid black;
+  height: 660px;
   text-align: center;
   padding: 5px;
 }
@@ -71,8 +73,6 @@ h1 {
 .card-front,
 .card-back {
   position: absolute;
-  width: 100%;
-  height:inherit;
   backface-visibility: hidden;
   background-color: white;
   z-index: 1;
@@ -112,7 +112,6 @@ h1 {
   margin-bottom: 2em;
   height: auto;
   width: 100%;
-  
 }
 
 .gallery-container {
@@ -156,8 +155,9 @@ nav {
   text-align: center;
   top: 0;
   width: 100%;
-  background:#f96211da;
+  background:#f96211;
   position: sticky;
+  z-index: 2;
 }
 
 nav ul {
@@ -177,12 +177,13 @@ nav a {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  padding: 24px 32px;
+  padding: 14px 32px;
 }
 
 nav a:hover {
   background: black;
   color: white;
+  border-radius: 5px;
 }
 
 .App {
@@ -197,5 +198,43 @@ nav a:hover {
 }
 
 .txt-formatted {
-  justify-content:stretch;
+  margin-top: 5em;
+}
+
+/*
+/* For iPhone 12 Mini */
+@media (max-width: 360px) {
+ 
+}
+
+/* Hide by default */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  height: 24px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.bar {
+  height: 5em;
+  width: 24px;
+  background: black;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* Show it under a certain breakpoint */
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: flex;
+  }
+  nav ul {
+    display: none;  /* Hide nav items */
+  }
+  nav ul.show {
+    display: block; /* Show nav items when menu is toggled */
+    
+  }
 }
