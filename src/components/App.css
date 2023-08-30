@@ -42,7 +42,7 @@ h1 {
   75% { transform: scale(1.2) translate(-5px, 0); }
   100% { transform: scale(1.2) translate(0, 0); }
 }
-
+/*service card displays*/
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, .3fr);
@@ -63,7 +63,7 @@ h1 {
   height: 690px; /* Height auto when expanded */
 }
 
-/*cards formatting*/
+/*card formatting*/
 .card-container .MuiCardContent-root {
   height: 660px;
   text-align: center;
@@ -240,15 +240,14 @@ nav a:hover {
 
   nav ul.show {
     max-height: 500px;  
-    opacity: 1;
+    opacity: 1; 
     transition: all 1s ease-in-out;
    }
 
   nav li {
-  display:grid;
-  grid-template-rows: repeat(5);
-  padding-top: .2px;
-  padding-bottom: .2px;
+  display:block;
+  padding-top: 6px;
+  padding-bottom: 6px;
   color: blue;
   }
 
@@ -263,9 +262,26 @@ nav a:hover {
   margin-top: 3em;
   }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, .3fr);
-    margin-top: 5em;
-  } 
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  margin-top: 2em;
+} 
+
+.card-container {
+  margin: 1em auto;
+  height: auto;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.card-container .MuiCardContent-root {
+  height: 400px;
+  }
+
+  .card-container.expanded {
+  height: 700px; /* Height auto when expanded */
+  }
 }
