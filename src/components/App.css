@@ -14,10 +14,8 @@ h1  {
 }
 
 .service-header-format{
-  margin-top: 2em;  
+  margin-top: 1em;  
   text-align: center;
-  border-bottom: black 2px solid;
-  padding-bottom: 1em;
 }
 
 .header-moved {
@@ -49,6 +47,7 @@ h1  {
 .dim {
   opacity: 0.5;
 }
+
 /*gallery images*/
 @keyframes shake {
   0% { transform: scale(1.2)translate(0, 0); }
@@ -57,6 +56,7 @@ h1  {
   75% { transform: scale(1.2) translate(-5px, 0); }
   100% { transform: scale(1.2) translate(0, 0); }
 }
+
 /*service card displays*/
 .services-grid {
     display: grid;
@@ -84,18 +84,19 @@ h1  {
 .card-container .MuiCardContent-root {
   height: 660px;
   text-align: center;
-  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
+/*
 .card-front,
 .card-back {
   position: absolute;
   backface-visibility: hidden;
   background-color: white;
   z-index: 1;
-
 }
-
+*/
 .card-back {
   transform: rotateY(180deg);
   position: absolute;
@@ -149,12 +150,13 @@ ul {
  list-style: none;
 
 }
+/*
 .parent-container {
   display:flex;
   flex-direction: row;
   align-items: center;
 }
-
+*/
 .child-container {
   text-align: left;
   font-size:14pt;
@@ -164,8 +166,10 @@ ul {
   width: 50%;
 }
 
+/*description section*/
 .txt-formatted {
-  display:inline-flex;
+  position: absolute;
+  margin-right: 20px;
 }
 
 nav {
@@ -186,22 +190,20 @@ nav ul {
 
 nav li {
   display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 24px;
   color: blue;
 }
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: rgb(4, 4, 152);
   font-weight: bold;
-  padding: 14px 32px;
+  padding: 5px 12px;
 }
 
 nav a:hover {
   background: black;
   color: white;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .App {
@@ -215,16 +217,14 @@ nav a:hover {
   color: #61dafb;
 }
 
-.txt-formatted {
-  margin-top: 5em;
-}
 
 
-/* For iPhone 12 Mini */
+
+/* For iPhone 12 Mini 
 @media (max-width: 360px) {
  
 }
-
+*/
 /* Hide by default */
 .hamburger-icon {
   display: flex;
@@ -238,10 +238,9 @@ nav a:hover {
 
   nav {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
   }
-
 
   nav ul {
     display:flex;
@@ -252,9 +251,6 @@ nav a:hover {
     transition: all 1s ease-in-out;
   }
 
-  
-    
-
   nav ul.show {
     max-height: 500px;  
     opacity: 1; 
@@ -262,10 +258,10 @@ nav a:hover {
    }
 
   nav li {
-  display:block;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  color: blue;
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: blue;
   }
 
   /*landing page image*/
@@ -276,47 +272,55 @@ nav a:hover {
   height: auto;
   object-fit: cover;
   overflow: hidden;
-  margin-top: 3em;
+  margin-top: 0;
   }
 
+  /*card container*/
 .services-grid {
   display: grid;
-  grid-template-columns: 20em;
-  gap: .2em;
-  margin-top: 7em;
-  margin-left: calc(100% - 19em);
+  grid-template-columns:100%;
+  margin-top: 1em;
+  margin-left: .8em;
+  margin-right: .8em;
+  border: 1px solid black;
+
   } 
 
-  /*card formatting*/
+  /*card content formatting*/
 .card-container .MuiCardContent-root {
   height: auto;
   text-align: center;
-  margin-top: -8%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction:column;
   }
 
+/*initial card dimensions*/
 .card-container {
-  margin: .7em .1em .2em .1em;
-  height: 18em;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  border: rgb(235, 105, 7) solid 2px;
-  margin-bottom: 1em;
-  }
-
+  margin: 1em .1em 2em .19em;
+  height: auto;
+  width: 97%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.326);
+}
+/*more details*/
 .description-text {
   color:  rgb(235, 105, 7);
-  }
+}
 
+.txt-formatted {
+  margin-top: 5em;
+}
+
+.price-text {
+  font-style: italic;
+  font-variant: small-caps;
+}
 .card-container:active {
   background-color: #0056b3;  /* Darker blue */
   }
 
 .card-container.expanded {
-  height: auto; /* Height auto when expanded */
+  height: 550px; /* Height auto when expanded */
+  background-color: transparent;
   }
 
 .card-container:hover {
@@ -324,13 +328,6 @@ nav a:hover {
   transform: scale(1.05);  /* Slightly enlarge the card */
   }
 
-.home-container {
-  display:inline-flex; 
-  width: auto;
-  height: 100vh;
-  overflow: hidden;
-  object-fit: cover;
-  }
 
 .home-img {
   display: flex;

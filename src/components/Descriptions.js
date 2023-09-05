@@ -12,7 +12,7 @@ const descriptions = {
     
     boarding24: "Overnight 24 hours",
     
-    catServices: "Required: Certificate of  up to date vaccines. Trim nails, clean ears, sanitary area"
+    catServices: "Trim nails, clean ears, sanitary area.  Required: Certificate of  up to date vaccines. "
     //... other descriptions
 };
 
