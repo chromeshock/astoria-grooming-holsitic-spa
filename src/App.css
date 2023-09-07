@@ -1,11 +1,18 @@
+@media screen and (min-width:768px) and (max-width: 1024px) {
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
   background-color: #eaddee3a;
 }
 
-h1 {
-  margin-top: 2em;  
+h1  {
+  margin-top: 1em;  
+  text-align: center;
+}
+
+.service-header-format{
+  margin-top: 1em;  
   text-align: center;
 }
 
@@ -15,6 +22,10 @@ h1 {
 
 .about-txt{
   margin-bottom: 10em;
+}
+
+.description-text {
+  color:  rgb(235, 105, 7);
 }
 
 .image-grid {
@@ -34,6 +45,7 @@ h1 {
 .dim {
   opacity: 0.5;
 }
+
 /*gallery images*/
 @keyframes shake {
   0% { transform: scale(1.2)translate(0, 0); }
@@ -43,41 +55,37 @@ h1 {
   100% { transform: scale(1.2) translate(0, 0); }
 }
 
+/*service card displays*/
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, .4fr);
-    
+    grid-template-columns: repeat(4, .3fr);
+    margin-top: 5em;
 } 
 
 .card-container {
-  transition: all 4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   overflow: hidden;
-  margin: 5em .5em .5em 1em;
-  height: 275px;
+  margin: 5em 3em 3em 5em;
+  height: 460px;
+  width: 350px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  border: rgb(235, 105, 7) solid 2px;
+  cursor: pointer;
 }
 
 .card-container.expanded {
-  height: auto; /* Height auto when expanded */
+  height: 690px; /* Height auto when expanded */
 }
 
-/*cards formatting*/
+/*card formatting*/
 .card-container .MuiCardContent-root {
-  max-height: 5%;
-  border: 1px solid black;
+  height: 660px;
   text-align: center;
-  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height:inherit;
-  backface-visibility: hidden;
-  background-color: white;
-  z-index: 1;
-
-}
 
 .card-back {
   transform: rotateY(180deg);
@@ -90,6 +98,7 @@ h1 {
   animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
   transform: scale(15.1);
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
   z-index: 1;
 }
 
@@ -112,11 +121,10 @@ h1 {
   margin-bottom: 2em;
   height: auto;
   width: 100%;
-  
 }
 
 .gallery-container {
-  margin-top: 10em;
+  margin-top: 8em;
 }
 
 /*landing page image*/
@@ -125,17 +133,12 @@ h1 {
   flex-direction:row;
   width: 100%;
   overflow: hidden;
-  margin-top: 5em;
+  margin-top: 3em;
 }
 
 ul {
  list-style: none;
 
-}
-.parent-container {
-  display:flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .child-container {
@@ -147,8 +150,10 @@ ul {
   width: 50%;
 }
 
+/*description section*/
 .txt-formatted {
-  display:inline-flex;
+  position: absolute;
+  margin-right: 20px;
 }
 
 nav {
@@ -169,21 +174,20 @@ nav ul {
 
 nav li {
   display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 24px;
   color: blue;
 }
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: rgb(4, 4, 152);
   font-weight: bold;
-  padding: 24px 32px;
+  padding: 5px 12px;
 }
 
 nav a:hover {
   background: black;
   color: white;
+  border-radius: 6px;
 }
 
 .App {
@@ -195,8 +199,125 @@ nav a:hover {
 
 .App-link {
   color: #61dafb;
+  }
 }
 
+
+
+
+/******** mobile-breakpoint ***********/
+@media screen and (max-width: 767px) and (min-width: 360px){
+  .hamburger-icon {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+
+  nav ul {
+    display:flex;
+    flex-direction: column;
+    max-height:0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 3s ease-in-out;
+  }
+
+  nav ul.show {
+    min-height: 100vh;  
+    opacity: 1; 
+    transition: all 1s ease-in-out;
+   }
+
+  nav li {
+    display: flex;
+    padding:1.5em;
+    color: blue;
+    font-size: larger;
+  }
+
+  /*landing page image*/
+.home-container {
+  display: flex;
+  flex-direction:row;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+  margin-top: 0;
+  }
+
+  /*card container*/
+.services-grid {
+  display: grid;
+  grid-template-columns:100%;
+  margin-top: 1em;
+  padding-bottom: 10em;
+  margin-left: .8em;
+  margin-right: .8em;
+  } 
+
+  /*card content title, price & details*/
+.card-container  {
+  height:auto;
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+}
+
+/*initial card dimensions*/
+.card-container {
+  margin: 1em .1em 2em .1em;
+  height: 220px;
+  width: 97%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.452);
+}
+/*more details*/
+.description-text {
+  color:  rgb(235, 105, 7);
+}
+
+
 .txt-formatted {
-  justify-content:stretch;
+  margin-top: 4.8em;
+  font-size:16px;
+  text-align:center;
+}
+
+.price-text {
+  font-style: italic;
+  font-variant: small-caps;
+ 
+}
+.card-container:active {
+  background-color: #0056b3;  /* Darker blue */
+  }
+
+.card-container.expanded {
+  height: auto; /* Height auto when expanded */
+  width:auto;
+
+  }
+
+.card-container:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.504);  /* Shadow for depth */
+  transform: scale(1.05);  /* Slightly enlarge the card */
+  }
+
+
+.home-img {
+  display: flex;
+  border: 1px solid black;
+  margin-bottom: 2em;
+  height: 90vh;
+  width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hamburger-icon {
+    display: none;
+  }
 }

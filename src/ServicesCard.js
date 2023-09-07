@@ -3,36 +3,34 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { useState } from'react';
-
+import Fade from '@mui/material/Fade';
 
 function ServiceCard({ service }) {
   const [isExpanded, setExpanded] = useState(false);
 
   const handleExpand = () => {
     setExpanded(!isExpanded);
+    console.log(isExpanded);
   };
 
   return (
     <div className={`card-container ${isExpanded ? 'expanded' : ''}`} onClick={handleExpand}>
       <Card variant="outlined">
         <CardContent>
-          <Typography variant="h5" component="div">
-            <p>{service.name}</p>
+          <Typography   sx={{ fontSize: '2.3rem' }}> 
+            {service.name}
           </Typography>
-          <Typography variant="body2" color="textSecondary">
-           <p>{service.price}</p>
+          <Typography  className='price-text' sx={{ fontSize: '1.8rem' }}>
+           {service.price} - {service.duration}
           </Typography>
-          <Typography variant="body2" color="textSecondary">
-           <p>{service.duration}</p>
-          </Typography>
-          <Typography variant="body2" component="div">
-           <p>{service.details}</p>
-          </Typography>
-          {isExpanded && (
-            <Typography variant="body2" color="textSecondary">
-              <p className='txt-formatted'>{service.descriptions}</p>
+           <Fade in={isExpanded} timeout={500}>
+            <Typography  >
+              <p className='txt-formatted '>{service.descriptions}</p>
             </Typography>
-          )}
+          </Fade>
+           <Typography className='description-text' sx={{ fontSize: '2rem' }}>
+           {service.details}
+          </Typography>
         </CardContent>
       </Card>
     </div>
