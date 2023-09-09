@@ -52,8 +52,8 @@ const services = [
 
 const ServicesComponent = () => (
     <div >
-        <h2 className="service-header-format">Pet Spa Services</h2>
-        <div className=" ">
+        <h2 className="service-header">Pet Spa Services</h2>
+        <div className="services-grid ">
             {services.map((service, index) => ( 
                 <ServiceCard key={index} service={service} />
               ))}

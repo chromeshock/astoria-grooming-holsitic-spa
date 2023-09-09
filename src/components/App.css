@@ -67,7 +67,7 @@
     overflow: hidden;
     margin: 5em 3em 3em 5em;
     height: 460px;
-    width: 350px;
+    width: 400px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     border: rgb(235, 105, 7) solid 2px;
@@ -75,14 +75,15 @@
   }
 
   .card-container.expanded {
-    height: 690px; /* Height auto when expanded */
+    height: max-content; /* Height auto when expanded */
   }
 
   /*card formatting*/
   .card-container .MuiCardContent-root {
-    height: 660px;
+    min-height: 800px;
+    height: auto;
     text-align: center;
-
+    margin-top: 4em;
   }
 
   /*photo gallery container*/
@@ -146,9 +147,9 @@
 
   /*description section*/
   .txt-formatted {
-    margin-top: 3em;
+    margin-top: 6em;
     font-size:22px;
-    text-align:start;
+    text-align:justify;
   }
 
   .price-text {
@@ -201,7 +202,10 @@
     color: #61dafb;
   }
 
-
+.service-header {
+    text-align: center;
+  }
+  
   /* Hide by default */
   .hamburger-icon {
     visibility:hidden;
@@ -216,7 +220,11 @@
   nav {
     display: flex;
     flex-direction:column;
+    border-bottom: 2px solid black;
     align-items: center;
+    top: 0;
+    background:#f96211;
+
   }
 
   nav ul {
@@ -268,6 +276,10 @@
   text-align: center;
   display: flex;
   flex-direction:column;
+  border-radius: 20px;
+  border: rgb(235, 105, 7) solid 2px;
+  overflow: hidden;
+
 }
 
 /*initial card dimensions*/
@@ -283,17 +295,6 @@
   
 }
 
-
-.txt-formatted {
-  margin-top: 5em;
-  font-size:22px;
-  text-align:start;
-}
-
-.price-text {
-  font-style: italic;
-  font-variant: small-caps;
-}
 .card-container:active {
   background-color: #0056b3;  /* Darker blue */
   }
@@ -308,11 +309,26 @@
   }
 
 
+.txt-formatted {
+  margin-top: 5em;
+  font-size:22px;
+  text-align:start;
+}
+
+.price-text {
+  font-style: italic;
+  font-variant: small-caps;
+}
+
 .home-img {
   display: flex;
   border: 1px solid black;
   margin-bottom: 2em;
   height: 90vh;
   width: 100%;
+  }
+
+  .service-header {
+    text-align: center;
   }
 }

@@ -18,7 +18,7 @@ const Navbar = () => {
   
   return (
     <nav>
-      <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleMenu} className={'icon-button'}>
+      <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleMenu}  className='hamburger-icon'>
         {showMenu ? <CloseIcon /> : <MenuIcon />}
       </IconButton>
       <div>

@@ -23,14 +23,14 @@ function ServiceCard({ service }) {
           <Typography  className='price-text' sx={{ fontSize: '1.8rem' }}>
            {service.price} - {service.duration}
           </Typography>
-           <Fade in={isExpanded} timeout={500}>
-            <Typography  >
-              <p className='txt-formatted '>{service.descriptions}</p>
-            </Typography>
-          </Fade>
            <Typography className='description-text' sx={{ fontSize: '2rem' }}>
            {service.details}
           </Typography>
+          <Fade in={isExpanded} timeout={500}>
+            <Typography  >
+              <p className='txt-formatted'>{service.descriptions}</p>
+            </Typography>
+          </Fade>
         </CardContent>
       </Card>
     </div>
