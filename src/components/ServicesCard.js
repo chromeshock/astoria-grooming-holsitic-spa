@@ -17,8 +17,8 @@ function ServiceCard({ service }) {
     <div className={`card-container ${isExpanded ? 'expanded' : ''}`} onClick={handleExpand}>
       <Card variant="outlined">
         <CardContent>
-          <Typography   sx={{ fontSize: '2.3rem' }}> 
-            {service.name}
+          <Typography className='txt-formatted'  sx={{ fontSize: '2.3rem' }}> 
+            {service.name} 
           </Typography>
           <Typography  className='price-text' sx={{ fontSize: '1.8rem' }}>
            {service.price} - {service.duration}
@@ -33,7 +33,10 @@ function ServiceCard({ service }) {
           </Fade>
         </CardContent>
       </Card>
+      
+
     </div>
+    
   );
 }
 

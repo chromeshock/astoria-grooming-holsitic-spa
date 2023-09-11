@@ -11,7 +11,7 @@ const services = [
     { name: 'Extra Desheading', details: 'No further details', price: '$15', duration: '30 min', descriptions: '' },
     { name: 'Face Trim', details: 'No further details', price: '$20', duration: '30 min', descriptions: '' },
     { name: 'Cat Claw Trim', details: 'No further details', price: '$30', duration: '30 min', descriptions: descriptions.catLionCut  },
-    { name: 'Nail Clipper for dogs',  details: 'Cick for more details', price: '$15', duration: '10 min', descriptions: '' },  
+    { name: 'Nail Clipper for dogs',  details: 'No further details', price: '$15', duration: '10 min', descriptions: '' },  
     { name: 'Cats kitty lion cut', details: 'Cick for more details',  price: '$120', duration: '2 hours', descriptions: descriptions.catLionCut  },
     { name: 'Face Trim', details: 'No further details', price: '$20', duration: '30 min', descriptions: descriptions.catLionCut  },
     { name: 'Cat Services', details: 'Cick for more details', price: '$90', duration: '2 hours', descriptions: descriptions.catServices  },   

@@ -4,6 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = React.useState(false);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -15,6 +16,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+  
   
   return (
     <nav>
@@ -35,6 +37,8 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     onClick={() => { alert('You will be redirected to an external site for processing...'); }}
                 >Book Now</a></li>
+                <button id="translate">Translate to Spanish</button>
+                  <p data-en="Hello" data-es="Hola">Hello</p>
       </ul>
     </nav>
   );
