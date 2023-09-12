@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Services from './components/Services';
 import Gallery from './components/Gallery';
+import './i18n';
 
 function App() {
   return (

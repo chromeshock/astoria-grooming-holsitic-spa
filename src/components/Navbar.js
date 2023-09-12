@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = React.useState(false);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
   const closeMenu = () => {
     setShowMenu(false);
   };
@@ -37,8 +42,9 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     onClick={() => { alert('You will be redirected to an external site for processing...'); }}
                 >Book Now</a></li>
-                <button id="translate">Translate to Spanish</button>
-                  <p data-en="Hello" data-es="Hola">Hello</p>
+                  <button onClick={() => changeLanguage('en')}>EN</button>
+                  <button onClick={() => changeLanguage('es')}>ES</button>
+                   {/* Add buttons for any other languages you support */}
       </ul>
     </nav>
   );
