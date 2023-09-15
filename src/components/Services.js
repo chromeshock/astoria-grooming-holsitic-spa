@@ -1,4 +1,3 @@
-// services.js
 import React from 'react';
 import ServiceCard from './ServicesCard';
 import descriptions from './Descriptions';
@@ -6,12 +5,12 @@ import descriptions from './Descriptions';
 
 
 const services = [
-    { name: 'Clean Ears', details: 'No further details', price: '$15', duration: '15 min', descriptions: ''  },
+    { name: 'Clean Ears', price: '$15', duration: '15 min', details: 'No further details', descriptions: ''  },
     { name: 'Paws Clean', details: 'Cick for more details', price: '$20', duration: '30 min', descriptions: descriptions.fullSpaDogs  },
     { name: 'Extra Desheading', details: 'No further details', price: '$15', duration: '30 min', descriptions: '' },
     { name: 'Face Trim', details: 'No further details', price: '$20', duration: '30 min', descriptions: '' },
     { name: 'Cat Claw Trim', details: 'No further details', price: '$30', duration: '30 min', descriptions: descriptions.catLionCut  },
-    { name: 'Nail Clipper for dogs',  details: 'No further details', price: '$15', duration: '10 min', descriptions: '' },  
+    { name: 'Nail Clipper for dogs',  details: 'Cick for more details', price: '$15', duration: '10 min', descriptions: '' },  
     { name: 'Cats kitty lion cut', details: 'Cick for more details',  price: '$120', duration: '2 hours', descriptions: descriptions.catLionCut  },
     { name: 'Face Trim', details: 'No further details', price: '$20', duration: '30 min', descriptions: descriptions.catLionCut  },
     { name: 'Cat Services', details: 'Cick for more details', price: '$90', duration: '2 hours', descriptions: descriptions.catServices  },   
@@ -21,7 +20,7 @@ const services = [
     { name: 'Medium double coat', details: 'Cick for more details', price: '$80', duration: '2 hours', descriptions: descriptions.fullSpaDogs },   
     { name: 'Nails Clipper dogs',  details: 'No further details', price: '$15', duration: '10 min', descriptions: descriptions.catLionCut  },   
     { name: 'Full spa extra small dogs',  details: 'Cick for more details', price: '$70', duration: '2 hours', descriptions: descriptions.fullSpaDogs }, 
-    { name: 'Full groom spa small dogs', details: 'Cick for more details', price: '$80', duration: '2 hours & 30 mins', descriptions: descriptions.fullSpaDogs  }, 
+    { name: 'Full groom spa small dogs', details: 'Cick for more details', price: '$80', duration: '2.5 hours', descriptions: descriptions.fullSpaDogs  }, 
     { name: 'Full groom spa medium dogs', details: 'Cick for more details', price: '$90', duration: '3 hours', descriptions: descriptions.fullSpaDogs  }, 
     { name: 'Full spa large dogs', details: 'Cick for more details', price: '$100', duration: '3 hours', descriptions: descriptions.fullSpaDogs  },
     { name: 'Full spa extra large dogs', details: 'Cick for more details', price: '$120', duration: '4 hours', descriptions: descriptions.fullSpaDogs  },
@@ -51,13 +50,10 @@ const services = [
 ];
 
 const ServicesComponent = () => (
-    <div >
-        <h2 className="service-header">Pet Spa Services</h2>
-        <div className="services-grid ">
-            {services.map((service, index) => ( 
-                <ServiceCard key={index} service={service} />
-              ))}
-        </div>
+    <div className="services-grid ">
+        {services.map((service, index) => ( 
+            <ServiceCard key={index} service={service} />
+          ))}
     </div>
 );
 
