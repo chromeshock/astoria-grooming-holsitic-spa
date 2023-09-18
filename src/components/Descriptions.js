@@ -1,3 +1,5 @@
+
+
 // Descriptions.js
 const descriptions = {
     catLionCut: `This service includes body shaving, mane maintenance, and grooming of the feet and a portion of the tail. We also clip nails, clean ears, and offer a dry bath featuring a specialized shampoo with micro-crystals to cleanse your cat's skin. Additional charges may apply if the cat has severely matted fur. We do not shave cats over 14 years old or underweight cats due to the fragility of their skin and the potential for injury from the clippers.

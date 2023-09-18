@@ -13,6 +13,7 @@ function App() {
     <Router>
       <div >
         <Navbar />
+        
         <div id='page-body'>
           <Routes>
             <Route path="/" element={<Home />} />
