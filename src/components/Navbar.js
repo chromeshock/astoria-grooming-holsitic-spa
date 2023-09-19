@@ -11,11 +11,9 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = React.useState(false);
  // const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
+  
   const closeMenu = () => {
     setShowMenu(false);
   };

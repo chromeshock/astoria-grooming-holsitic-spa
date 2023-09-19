@@ -4,8 +4,11 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { useState } from'react';
 import Fade from '@mui/material/Fade';
+import { useTranslation } from 'react-i18next';
 
+// hooks for component state management
 function ServiceCard({ service }) {
+  const { t } = useTranslation();
   const [isExpanded, setExpanded] = useState(false);
 
   const handleExpand = () => {
@@ -18,17 +21,17 @@ function ServiceCard({ service }) {
       <Card variant="outlined">
         <CardContent>
           <Typography className='txt-formatted'  sx={{ fontSize: '2.3rem' }}> 
-            {service.name} 
+            {t(service.name)}
           </Typography>
           <Typography  className='price-text' sx={{ fontSize: '1.8rem' }}>
-           {service.price} - {service.duration}
+           {t(service.price)} - {t(service.duration)}
           </Typography>
            <Typography className='description-text' sx={{ fontSize: '2rem' }}>
-           {service.details}
+           {t(service.details)}
           </Typography>
           <Fade in={isExpanded} timeout={500}>
             <Typography  >
-              <p className='txt-formatted'>{service.descriptions}</p>
+              <p className='txt-formatted'>{t(service.descriptions)}</p>
             </Typography>
           </Fade>
         </CardContent>
