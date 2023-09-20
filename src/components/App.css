@@ -252,6 +252,13 @@
     font-size: larger;
   }
 
+h1 {
+  text-align: center;
+  padding-left: .04em;
+  padding-right:.04em;
+  margin-bottom: auto;
+  margin-top: auto;
+}3
   /*landing page image*/
 .home-container {
   display: flex;
