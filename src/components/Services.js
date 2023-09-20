@@ -1,7 +1,8 @@
 import React from 'react';
 import ServiceCard from './ServicesCard';
 import descriptions from './Descriptions';
-import { useTranslation } from 'react-i18next';
+//import descriptions from './Descriptions';
+
 
 const services = [
     { name: 'Clean Ears', price: '$15', duration: '15 min', details: 'No further details', descriptions: ''  },
