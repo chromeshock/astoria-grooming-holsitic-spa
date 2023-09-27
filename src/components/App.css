@@ -22,8 +22,8 @@
     text-align: center;
   }
 
-  .about-txt{
-    margin-bottom: 5em;
+  .about-txt {
+    margin-top: 5em;
   }
 
    .price-text {
@@ -33,10 +33,11 @@
     padding-bottom: 1em;
   }
 
-  .description-text {
-    color:  rgb(235, 105, 7);
-
-  }
+  /*more details*/
+.color-text {
+  color:  rgb(235, 105, 7);
+  padding-top: .5em;
+}
 
   .image-grid {
     display: grid;
@@ -244,18 +245,18 @@
     transition: all 3s ease-in-out;
   }
 
-  nav ul.show {
-    min-height: 100vh;  
-    opacity: 1; 
-    transition: all 1s ease-in-out;
-   }
-
-  nav li {
-    display: flex;
-    padding:1.5em;
-    color: blue;
-    font-size: larger;
-  }
+nav ul.show {
+  min-height: 100vh;  
+  opacity: 1; 
+  transition: all 1s ease-in-out;
+ }
+ 
+nav li {
+  display: flex;
+  padding:1.5em;
+  color: blue;
+  font-size: larger;
+}
 
 h1 {
   text-align: center;
@@ -304,7 +305,7 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.452);
 }
 /*more details*/
-.description-text {
+.color-text {
   color:  rgb(235, 105, 7);
   padding-top: 1em;
 }
@@ -324,8 +325,7 @@ h1 {
 
 
 .txt-formatted {
-  margin-top: 5em;
-  font-size:39px;
+  font-size:18px;
   text-align:center;
 }
 

@@ -6,10 +6,8 @@ function About () {
         <div className='parent-container'>
             <div className='child-container'>
             <h1 className='header-moved' >About</h1>
-                <p className='about-txt'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum      dolore eu fug.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fug.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fug</p>
-            </div>
-               
-            
+                <p className='about-txt'>We've designed a special place for your beloved pets. We aim to be more than just a regular grooming salon; our atmosphere is cage-free. Each client has a separate grooming room, with special accommodations to keep our cat clients isolated. Our tables and hydraulic bathtubs make it easier to handle both long and extra-long dog breeds</p>
+            </div>           
         </div>
     )
 }
