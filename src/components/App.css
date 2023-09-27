@@ -22,8 +22,8 @@
     text-align: center;
   }
 
-  .about-txt {
-    margin-top: 5em;
+  .about-txt{
+    margin-bottom: 5em;
   }
 
    .price-text {
@@ -33,11 +33,10 @@
     padding-bottom: 1em;
   }
 
-  /*more details*/
-.color-text {
-  color:  rgb(235, 105, 7);
-  padding-top: .5em;
-}
+  .color-text {
+    color:  rgb(235, 105, 7);
+
+  }
 
   .image-grid {
     display: grid;
@@ -78,7 +77,7 @@
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     margin: 5em 1em 1em 3em;
-    height: 330px;
+    height: 400px;
     width: auto;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
@@ -245,18 +244,18 @@
     transition: all 3s ease-in-out;
   }
 
-nav ul.show {
-  min-height: 100vh;  
-  opacity: 1; 
-  transition: all 1s ease-in-out;
- }
- 
-nav li {
-  display: flex;
-  padding:1.5em;
-  color: blue;
-  font-size: larger;
-}
+  nav ul.show {
+    min-height: 100vh;  
+    opacity: 1; 
+    transition: all 1s ease-in-out;
+   }
+
+  nav li {
+    display: flex;
+    padding:1.5em;
+    color: blue;
+    font-size: larger;
+  }
 
 h1 {
   text-align: center;
@@ -300,14 +299,13 @@ h1 {
 /*initial card dimensions*/
 .card-container {
   margin: 1em .1em 2em .19em;
-  height:250px;
+  height:300px;
   width: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.452);
 }
 /*more details*/
 .color-text {
   color:  rgb(235, 105, 7);
-  padding-top: 1em;
+  padding-top: 4em;
 }
 
 .card-container:active {
@@ -325,13 +323,14 @@ h1 {
 
 
 .txt-formatted {
-  font-size:18px;
+  font-size:19px;
   text-align:center;
 }
 
 .price-text {
   font-style: italic;
   font-variant: small-caps;
+  padding-top: 1px;
 }
 
 .home-img {
@@ -345,4 +344,22 @@ h1 {
   .service-header {
     text-align: center;
   }
+
+  .image-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em 0 2em 0;
+    row-gap: 25px;  
+}
+
+  .image-item img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border: black 2px solid;
+  }
+
 }
