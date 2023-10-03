@@ -10,6 +10,15 @@ const resources = {
     //keys to be translated
     translation: {
       welcome: 'Welcome to our Astoria Grooming Holistic Pet Spa',
+      
+      //details, duration 
+      'No further details': 'No further details',
+      'Click for more details':'Click for more details',
+      '30 min': '30 min',
+      '10 min': '10 min',
+      '15 min': '15 min',
+      '1 hour': '1 hour',
+      
       //1st row
         'Cat Claw Trim': 'Cat Claw Trim',
         'Nail Clipper for dogs': 'Nail Clipper for dogs',
@@ -50,18 +59,19 @@ const resources = {
         'Dogs Basic small spa long hair': 'Dogs Basic small spa long hair',
         'Dogs Basic extra small spa long hair': 'Dogs Basic extra small spa long hair',
         'Dogs Basic extra small spa double coat spa': 'Dogs Basic extra small spa double coat spa',
-        'Dogs Basic extra large dog standard poodle and poddle mix spa': 'Dogs Basic extra large dog standard poodle and  poddle mix spa',
+        'Dogs Basic extra spa double coat': 'Dogs Basic extra spa double coat',
 
       //8th row
         'Dogs Basic Extra large long hair': 'Dogs Basic Extra large long hair',
-        'Dogs Basic Extra large coat double coat spa': 'Dogs Basic Extra large coat double coat spa',
-         'Cocker Spaniel, Cavalier Charles Kings, Cookapoo Or similare mixes': 'Cocker Spaniel, Cavalier Charles Kings, Cookapoo Or simmilare mixes',
+        'Dogs Basic extra large standard poodle and poodle mix spa': 'Dogs Basic extra large standard poodle and poodle mix spa', 
+        'Dogs Basic extra small spa double coat': 'Dogs Basic extra small spa double coat',
+        'Cocker Spaniel, Cavalier Charles Kings Or Similares Mixes':'Cocker Spaniel, Cavalier Charles Kings Or Similares Mixes',
 
       //9th row
       'Boarding Services X 24 Hours': 'Boarding Services X 24 Hours',
-      'Daycare Day/ dogs stay 9am to 7pm': 'Daycare Day/ dogs stay 9am to 7pm',
+      'Day care Full Day dogs stay 9am to 7pm':'Day care Full Day dogs stay 9am to 7pm',
       'Daycare half day/up to 5 hours': 'Daycare half day/up to 5 hours',
-      'Cat Boarding/ 24 hours': 'Cat Boarding/ 24 hours',
+      'Cat Boarding 24 hours': 'Cat Boarding 24 hours',
     }
   },
 
@@ -84,6 +94,9 @@ const resources = {
 
       //description es translated rabiesCert
         "Required: Certificate of up to date vaccines. Rabies and bordetella": "Requerido: Certificado de vacunas actualizadas. Rabies y bordetella",
+      
+        //catServices
+        "Trim nails, clean ears, sanitary area. Required: Certificate of up to date vaccines": "Requerido: Certificado de vacunas actualizadas. Rabies y bordet hay area sanitaria",
 
       //1st row
         'Cat Claw Trim': 'Adorno de garra de gato',
@@ -128,14 +141,14 @@ const resources = {
 
       //8th row
         'Dogs Basic Extra large long hair': 'Perros Básico Pelo largo extra grande',
-        'Dogs Basic Extra large coat double coat spa': 'Perros Basic Abrigo extra grande doble abrigo spa',
-        'Cocker Spaniel, Cavalier Charles Kings, Cookapoo Or similare mixes': 'Cocker Spaniel, Cavalier Charles Kings, Cookapoo o mezclas similares',
+        'Dogs Basic extra small spa double coat': 'Dogs Basic abrigo doble spa extra pequeño',
+        'Cocker Spaniel, Cavalier Charles Kings, Cockapoo Or Similares Mixes': 'Cocker Spaniel, Cavalier Charles Kings, Cockapoo o mezclas similares',
 
       //9th row
-      'Boarding Services X 24 Hours': 'Servicios de Embarque X 24 Horas',
-      'Day Care Day/ dogs stay 9am to 7pm': 'Guardería/perros de 9:00 a 19:00 horas.',
-      'Day Care half day/up to 5 hours': 'Guardería medio día/hasta 5 horas',
-      'Cat Boarding/ 24 hours': 'Alojamiento para gatos/ 24 horas',
+        'Boarding Services X 24 Hours': 'Servicios de Embarque X 24 Horas',
+        'Day care Full Day dogs stay 9am to 7pm': 'Guardería perros de 9:00 a 19:00 horas.',
+        'Day Care half day/up to 5 hours': 'Guardería medio día/hasta 5 horas',
+        'Cat Boarding 24 hours': 'Alojamiento para gatos 24 horas',
     }
   },
 
@@ -158,7 +171,11 @@ const resources = {
 
       //description es translated rabiesCert
         "Required: Certificate of up to date vaccines. Rabies and bordetella": "Απαιτείται: Πιστοποιητικό επικαιροποιημένων εμβολιασμών. Λύσσα και Μπορντετέλα",
-      //1st row
+      
+        //overnight boarding
+        "Overnight 24 hours":"Διανυκτέρευση 24 ώρες",
+
+        //1st row
         'Cat Claw Trim': 'Διακοσμητικό νύχι γάτας',
         'Nail Clipper for dogs': 'Νυχοκόπτη για σκύλουςs',
         'Clean Ears': 'Καθαρά αυτιά',
@@ -202,14 +219,14 @@ const resources = {
 
       //8th row
         'Dogs Basic Extra large long hair': 'Dogs Basic Εξαιρετικά μεγάλα μακριά μαλλιά',
-        'Dogs Basic Extra large coat double coat spa': 'Dogs Basic Εξαιρετικά μεγάλο παλτό με διπλό παλτό σπα',
-        'Cocker Spaniel, Cavalier Charles Kings, Cookapoo Or similar mixes': 'Cocker Spaniel, Cavalier Charles Kings, Cookapoo Ή παρόμοια μείγματα',
+        'Dogs Basic extra small spa double coat': '«Dogs Basic πολύ μικρό διπλό παλτό σπα»',
+        'Cocker Spaniel, Cavalier Charles Kings Or similar mixes': 'Cocker Spaniel, Cavalier Charles Kings, Cockapoo Ή παρόμοια μείγματα',
 
       //9th row
         'Boarding Services X 24 Hours': 'Υπηρεσίες επιβίβασης X 24 Ώρες',
-        'Day Care Day/ dogs stay 9am to 7pm': 'Daycare Day/ τα σκυλιά μένουν 9 π.μ. έως 7 μ.μ',
+       'Day care Full Day dogs stay 9am to 7pm': 'Daycare Day τα σκυλιά μένουν 9 π.μ. έως 7 μ.μ',
         'Day Care half day/up to 5 hours': 'Ημερήσια φροντίδα μισή μέρα/έως 5 ώρες',
-        'Cat Boarding/ 24 hours': 'Επιβίβαση γάτας/ 24 ώρες',
+        'Cat Boarding 24 hours': 'Επιβίβαση γάτας 24 ώρες',
       // ... more keys
     }
   }

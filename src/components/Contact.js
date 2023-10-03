@@ -26,14 +26,13 @@ const mapUrl = location && `https://maps.locationiq.com/v3/staticmap?key=pk.6e1d
     <div className="App">
       <h1>Contact</h1>
       {location && (
-        <div>
-          <img src = { mapUrl } alt = { `Map of ${location.display_name}`} />
-            <p>Address: {location.display_name}</p>
+        <div className='img-container'>
+          <img src = { mapUrl }  alt = { `Map of ${location.display_name}`} />
+            <p >Address: {location.display_name}</p>
             <p>Phone (347) 586-8820</p>
             <p>Email: astoriagroomingholisticspa@gmail.com</p>
             <p>Buisness Hours</p>
             <p>Monday - Sunday: 10am - 7pm</p>
-
         </div>
       )}
     </div>

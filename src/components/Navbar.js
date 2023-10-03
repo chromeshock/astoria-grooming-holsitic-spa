@@ -29,7 +29,7 @@ const Navbar = () => {
         {showMenu ? <CloseIcon /> : <MenuIcon />}
       </IconButton>
       <div>
-        <h1>{t('welcome')}</h1>
+        <h3>{t('welcome')}</h3>
       </div>
       <ul className={showMenu ? 'show' : ''}>
         <li onClick={closeMenu}><Link to ="/">Home</Link></li>
