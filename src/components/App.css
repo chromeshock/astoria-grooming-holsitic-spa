@@ -255,18 +255,19 @@
     font-size: larger;
   }
 
-  h3 {
-    text-align: center;
-        color: rgb(13, 13, 110);
+h3 {
+  text-align: center;
+  color: rgb(13, 13, 110);
+}
 
-  }
 h1 {
   text-align: center;
   padding-left: .04em;
   padding-right:.04em;
   margin-bottom: auto;
-  margin-top: auto;
+  margin-top: 1em;
 }
+
 
   /*landing page image*/
 .home-container {
@@ -388,6 +389,10 @@ h1 {
   text-align: center;
 }
 
+.compact-location {
+  margin: 2em 1em 2em 1em;
+}
+
 .up-arrow {
   position: fixed;
   margin-right: 43%;
@@ -403,7 +408,8 @@ h1 {
 .up-arrow.show {
   opacity: 1;
   visibility: visible;
-  
+  color:  rgb(235, 105, 7);
+
 }
 
 }
