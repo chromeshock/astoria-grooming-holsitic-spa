@@ -27,9 +27,11 @@
   padding-top: 1em;
   padding-bottom: 1em;
 }
+
 .color-text {
   color:  rgb(235, 105, 7);
 }
+
 /*gallery-container*/
   .image-grid {
     display: grid;
@@ -40,19 +42,30 @@
     padding-top: 2em;
   }
 
-  .image-item img {
-    display: grid;
-    margin-left: 5em;
-    margin-right: 5em;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: black 2px solid;
+.image-item img {
+  display: grid;
+  margin-left: 5em;
+  margin-right: 5em;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: black 2px solid;
+}
+
+/*map pic*/
+.img-container {
+  margin-top: 5em;
+  width: auto;
+  text-align: center;
+}
+
+.map {
+  border: .5px solid black;
   }
 
-  .dim {
-    opacity: 0.5;
-  }
+.dim {
+  opacity: 0.5;
+}
 
   /*gallery images*/
   @keyframes shake {
@@ -65,10 +78,10 @@
 
   /*service card displays*/
   .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      margin: 4em 2em 1em 1em;
-      max-width: max-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 4em 2em 1em 1em;
+    max-width: max-content;
   } 
 
   .card-container {
@@ -77,7 +90,6 @@
     margin: 5em 1em 1em 3em;
     height: 400px;
     width: auto;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     border: rgb(235, 105, 7) solid 2px;
     cursor: pointer;
@@ -86,6 +98,7 @@
 
   .card-container.expanded {
     height: max-content; /* Height auto when expanded */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   /*card formatting*/
@@ -94,7 +107,6 @@
     height: auto;
     text-align: center;
     margin-top: 2em;
-
   }
 
   /*photo gallery container*/
@@ -126,6 +138,10 @@
     height: auto;
     width: 100%;
   }
+
+  .about-header {
+   padding-top: 2em;
+ }
 
   .gallery-container {
     margin-top: 8em;
@@ -197,6 +213,10 @@
     border-radius: 6px;
   }
 
+ h1 {
+  text-align: center;
+ }
+
   .App {
     text-align: center;
     display:flex;
@@ -212,11 +232,17 @@
     text-align: center;
   }
   
+.compact-location {
+  margin: 2em 1em 2em 1em;
+}
+
   /* Hide by default */
   .hamburger-icon {
     visibility:hidden;
   }
 }
+
+
 /************** mobile-breakpoint **********/
 @media screen and (max-width: 768px) {
   .hamburger-icon {
@@ -385,7 +411,6 @@ h1 {
   flex-direction: column;
   margin-top: 5em;
   width: auto;
-  border: solid 1px black;
   text-align: center;
 }
 
