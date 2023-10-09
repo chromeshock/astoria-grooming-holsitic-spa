@@ -79,6 +79,7 @@ const ServicesComponent = () => {
 
   return (
     <div className="services-grid">
+      <h1 className='spa-service-header '>Spa Services</h1>
       {services.map((service, index) => (
         <ServiceCard key={index} service={service} />
       ))}

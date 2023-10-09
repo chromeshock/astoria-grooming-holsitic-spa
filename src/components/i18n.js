@@ -1,7 +1,6 @@
 // i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-//import TranslationComponent from './components/Translations';
 
 
 
@@ -14,6 +13,12 @@ const resources = {
       //details, duration 
       'No further details': 'No further details',
       'Click for more details':'Click for more details',
+      "This service is a complementary service for dogs Double coats.":"This service is a complementary service for dogs Double coats.",
+      
+      //about us
+        'We have designed a special place for your beloved pets, we aim to be the more than just regular grooming salon, our atmosphere is cage free. Each client has a separate grooming room, with special accommodations to keep our cat clients isolated. Our tables and hydraulic bathtubs make it easier to handle both long and extra long dog breeds.' : 'We have designed a special place for your beloved pets, we aim to be the more than just regular grooming salon, our atmosphere is cage free. Each client has a separate grooming room, with special accommodations to keep our cat clients isolated. Our tables and hydraulic bathtubs make it easier to handle both long and extra long dog breeds.',
+      
+      "About Us":"About Us",
       '30 min': '30 min',
       '10 min': '10 min',
       '15 min': '15 min',
@@ -29,7 +34,7 @@ const resources = {
         'Extra Desheading': 'Extra Desheading',
         'Face Trim': 'Face Trim',
         'Cats kitty lion cut': 'Cats kitty lion cut',
-        'Cat Services': 'Cat Services',
+        'catServices': 'Cat Services',
 
       //3rd row
         'Cats Long Hair': 'Cats Long Hair',
@@ -81,10 +86,15 @@ const resources = {
       //details, duration 
         'No further details': 'No hay detalles',
         'Click for more details': 'Haga clic para más detalles',
+        "This service is a complementary service for dogs Double coats.":"Este servicio es un servicio complementario para perros de doble pelaje.",
         '30 min': '30 Minutos',
         '10 min': '10 Minutos',
         '15 min': '15 Minutos',
         '1 hour': '1 Hora',
+
+          //about us
+        'We have designed a special place for your beloved pets, we aim to be the more than just regular grooming salon, our atmosphere is cage free. Each client has a separate grooming room, with special accommodations to keep our cat clients isolated. Our tables and hydraulic bathtubs make it easier to handle both long and extra long dog breeds.' : 'Hemos diseñado un lugar especial para sus queridas mascotas, nuestro objetivo es ser más que un simple salón de belleza, nuestro ambiente es libre de jaulas. Cada cliente tiene una sala de aseo separada, con adaptaciones especiales para mantener aislados a nuestros clientes gatos. Nuestras mesas y bañeras hidráulicas facilitan el manejo de perros tanto de razas largas como extralargas.',
+        "About Us":"Sobre nosotros",
 
       //description es translated full spa dogs
         'For admission to our facility, a certificate confirming vaccinations for rabies, distemper, and bordetella is required. Your dog will enjoy a relaxing bath featuring a range of shampoos, including oatmeal, tearless, and hypoallergenic options, along with a blueberry facial and conditioner. We also trim nails, clean ears, and cut hair. A finishing touch of shining spray is applied. Additional fees may apply for dogs with severely matted fur.': 'Para el ingreso a nuestras instalaciones se requiere un certificado que acredite las vacunas contra la rabia, el moquillo y la bordetella. Su perro disfrutará de un baño relajante con una variedad de champús, que incluyen opciones de avena, sin lágrimas e hipoalergénicos, junto con un acondicionador y un tratamiento facial de arándanos. También cortamos uñas, limpiamos orejas y cortamos pelo. Se aplica un toque final con spray brillante. Se pueden aplicar tarifas adicionales para perros con pelaje muy enredado.',
@@ -96,7 +106,7 @@ const resources = {
         "Required: Certificate of up to date vaccines. Rabies and bordetella": "Requerido: Certificado de vacunas actualizadas. Rabies y bordetella",
       
         //catServices
-        "Trim nails, clean ears, sanitary area. Required: Certificate of up to date vaccines": "Requerido: Certificado de vacunas actualizadas. Rabies y bordet hay area sanitaria",
+        "Trim nails, clean ears, sanitary area. Required: Certificate of up to date vaccines": "Recortar uñas, limpiar orejas, zona sanitaria. Requerido: Certificado de vacunas al día.",
 
       //1st row
         'Cat Claw Trim': 'Adorno de garra de gato',
@@ -158,6 +168,12 @@ const resources = {
       //details, duration 
         'No further details': 'Χωρίς περισσότερες λεπτομέρειες"',
         'Click for more details': 'Κάντε κλικ για περισσότερες λεπτομέρειες',
+        "This service is a complementary service for dogs Double coats.":"Αυτή η υπηρεσία είναι μια συμπληρωματική υπηρεσία για σκύλους Διπλά παλτά.",
+        
+        //about us
+        'We have designed a special place for your beloved pets, we aim to be the more than just regular grooming salon, our atmosphere is cage free. Each client has a separate grooming room, with special accommodations to keep our cat clients isolated. Our tables and hydraulic bathtubs make it easier to handle both long and extra long dog breeds.' : 'Έχουμε σχεδιάσει έναν ειδικό χώρο για τα αγαπημένα σας κατοικίδια, στοχεύουμε να είμαστε κάτι περισσότερο από ένα απλό σαλόνι περιποίησης, η ατμόσφαιρά μας είναι χωρίς κλουβιά. Κάθε πελάτης έχει ξεχωριστό δωμάτιο περιποίησης, με ειδικά καταλύματα για να κρατούν τις γάτες πελάτες μας απομονωμένες. Τα τραπέζια και οι υδραυλικές μπανιέρες μας διευκολύνουν τον χειρισμό τόσο μακριών όσο και πολύ μακριών φυλών σκύλων.',
+        "About Us":"σχετικά με εμάς",
+        
         '30 min': '30 λεπτά',
         '10 min': '10 λεπτά',
         '15 min': '15 λεπτά',
@@ -185,7 +201,7 @@ const resources = {
         'Extra Desheading': 'Αποκεφαλισμός',
         'Face Trim': 'Περικοπή προσώπου',
         'Cats kitty lion cut': 'Γάτες γατούλα κομμένα λιοντάρι',
-        'Cat Services': 'Υπηρεσίες για γάτες',
+        'catServices': 'Υπηρεσίες για γάτες',
 
       //3rd row
         'Cats Long Hair': 'Γάτες μακρυμάλλη',

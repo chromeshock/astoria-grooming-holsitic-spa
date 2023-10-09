@@ -23,11 +23,11 @@ const mapUrl = location && `https://maps.locationiq.com/v3/staticmap?key=pk.6e1d
     center=${location.lat},${location.lon}&zoom=14&size=500x500&format=png&maptype=roadmap&markers=icon:red|${location.lat},${location.lon}`;
 
   return (
-    <div >
+    <div className='compact-location'>
       <h1>Contact</h1>
       {location && (
         <div className='img-container'>
-          <img src = { mapUrl }  alt = { `Map of ${location.display_name}`} />
+          <img src = { mapUrl } className='map' alt = { `Map of ${location.display_name}`} />
             <div className='compact-location'>
               <p>Address: {location.display_name}</p>
               <p>Phone (347) 586-8820</p>
