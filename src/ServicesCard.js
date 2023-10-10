@@ -6,6 +6,8 @@ import { useState } from'react';
 import Fade from '@mui/material/Fade';
 import { useTranslation } from 'react-i18next';
 
+
+
 // hooks for component state management
 function ServiceCard({ service }) {
   const { t } = useTranslation();
@@ -16,6 +18,7 @@ function ServiceCard({ service }) {
     console.log(isExpanded);
   };
 
+ 
   return (
     <div className={`card-container ${isExpanded ? 'expanded' : ''}`} onClick={handleExpand}>
       <Card variant="outlined">
@@ -32,6 +35,12 @@ function ServiceCard({ service }) {
           <Fade in={isExpanded} timeout={500}>
             <Typography  >
               <p className='txt-formatted'>{t(service.descriptions)}</p>
+                <a href="https://grooming-spa-2275-27-street-astoria-11105.square.site/" //redirects to processing site
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => { alert('You will be redirected to an external site for processing...'); }}>
+                Book Now
+                </a>
             </Typography>
           </Fade>
         </CardContent>
