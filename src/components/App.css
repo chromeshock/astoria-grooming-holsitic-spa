@@ -1,4 +1,4 @@
-@media screen and (min-width:866px) and (max-width: 3200px){
+@media screen and (min-width:2560px) and (max-width: 51200px){
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,14 +32,14 @@ body {
 }
 
 /*gallery-container*/
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(6, .15fr);
-    gap: 30px;
-    margin: 3em auto 5em auto;
-    padding-bottom: 2em;
-    padding-top: 2em;
-  }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(6, .15fr);
+  gap: 30px;
+  margin: 3em auto 5em auto;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
 
 .image-item img {
   display: grid;
@@ -66,86 +66,84 @@ body {
   opacity: 0.5;
 }
 
-  /*gallery images*/
-  @keyframes shake {
-    0% { transform: scale(1.2)translate(0, 0); }
-    25% { transform: scale(1.2) translate(-5px, 0); }
-    50% { transform: scale(1.2) translate(5px, 0); }
-    75% { transform: scale(1.2) translate(-5px, 0); }
-    100% { transform: scale(1.2) translate(0, 0); }
-  }
+/*gallery images*/
+@keyframes shake {
+  0% { transform: scale(1.2)translate(0, 0); }
+  25% { transform: scale(1.2) translate(-5px, 0); }
+  50% { transform: scale(1.2) translate(5px, 0); }
+  75% { transform: scale(1.2) translate(-5px, 0); }
+  100% { transform: scale(1.2) translate(0, 0); }
+}
 
-  /*service card displays*/
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 4em 2em 1em 1em;
-    max-width: max-content;
-  } 
+/*service card displays*/
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 4em 2em 1em 1em;
+  max-width: max-content;
+} 
+.card-container {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  margin: 5em 1em 1em 3em;
+  height: 400px;
+  width: auto;
+  border-radius: 20px;
+  border: rgb(235, 105, 7) solid 2px;
+  cursor: pointer;
+}
 
-  .card-container {
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-    margin: 5em 1em 1em 3em;
-    height: 400px;
-    width: auto;
-    border-radius: 20px;
-    border: rgb(235, 105, 7) solid 2px;
-    cursor: pointer;
-    
-  }
+.card-container.expanded {
+  height: max-content; /* Height auto when expanded */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-  .card-container.expanded {
-    height: max-content; /* Height auto when expanded */
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+/*card formatting*/
+.card-container .MuiCardContent-root {
+  min-height: 800px;
+  height: auto;
+  text-align: center;
+  margin-top: 2em;
+}
 
-  /*card formatting*/
-  .card-container .MuiCardContent-root {
-    min-height: 800px;
-    height: auto;
-    text-align: center;
-    margin-top: 2em;
-  }
+/*photo gallery container*/
+.enlarge {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  transform: scale(15.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+}
 
-  /*photo gallery container*/
-  .enlarge {
-    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
-    transform: scale(15.1);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    z-index: 1;
-  }
+.image-item:not(.dim) {
+  opacity: 1;
+}
 
-  .image-item:not(.dim) {
-    opacity: 1;
-  }
+.crew-img {
+  border: 2px solid;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  margin-top: 8em;
+  margin-right: 4em;
+}
 
-  .crew-img {
-    border: 2px solid;
-    border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    margin-top: 8em;
-    margin-right: 4em;
-  }
+/**home page image*/
+.home-img {
+  display: flex;
+  border: 1px solid black;
+  margin-bottom: 2em;
+  height: auto;
+  width: 100%;
+}
 
-  .home-img {
-    display: flex;
-    border: 1px solid black;
-    margin-bottom: 2em;
-    height: auto;
-    width: 100%;
-  }
+ .about-header {
+  padding-top: 2em;
+}
 
-  .about-header {
-   padding-top: 2em;
+ .gallery-container {
+   margin-top: 8em;
  }
-
-  .gallery-container {
-    margin-top: 8em;
-  }
-
   /*landing page image*/
   .home-container {
     display: flex;
@@ -216,45 +214,259 @@ body {
   text-align: center;
  }
 
-  .App {
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    border: 1px solid black;
-  }
+.App {
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
 
-  .App-link {
-    color: #61dafb;
-  }
+.App-link {
+  color: #61dafb;
+}
 
-.service-header {
-    text-align: center;
-  }
+.spa-service-header {
+  margin-top: 8em;
+}
   
 .compact-location {
   margin: 2em 1em 2em 1em;
 }
 
-  /* Hide by default */
-  .hamburger-icon {
-    visibility:hidden;
-  }
+/* Hide by default */
+.hamburger-icon {
+  visibility:hidden;
+}
 }
 
-/**ipadpro screen **/
-@media screen and (max-width: 912px) {
+/***********************************************ipad pro 1024px***/
+@media screen and (min-width:920px) and (max-width: 1024px) {
+  /*landing page image*/
+  .home-container {
+    display: flex;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    margin-top: 0;
+  }
+
+  /**home page image*/
+.home-img {
+  display: flex;
+  border: 1px solid black;
+  margin-bottom: 2em;
+  height: auto;
+}
+
+  /*card container*/
+.services-grid {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: .5em;
+  margin: 4em .5em 1em .5em;
+  max-width: max-content;
+} 
+
+  /*card content title, price & details*/
+.card-container  {
+  height:auto;
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  border-radius: 20px;
+  border: rgb(235, 105, 7) solid 2px;
+  overflow: hidden;
+}
+
 /*initial card dimensions*/
 .card-container {
   margin: 1em .1em 2em .19em;
   height:360px;
   width: auto;
 }
+
+/*gallery-container*/
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, .2fr);
+    gap: 30px;
+    margin: 3em auto 5em auto;
+    padding-bottom: 2em;
+    padding-top: 2em;
   }
 
+  .dim {
+  opacity: 0.5;
+}
 
 
-/************** mobile-breakpoint **********/
-@media screen and (max-width: 912px) {
+/*gallery images*/
+@keyframes shake {
+  0% { transform: scale(1.2)translate(0, 0); }
+  25% { transform: scale(1.2) translate(-5px, 0); }
+  50% { transform: scale(1.2) translate(5px, 0); }
+  75% { transform: scale(1.2) translate(-5px, 0); }
+  100% { transform: scale(1.2) translate(0, 0); }
+}
+
+/*photo gallery container*/
+.enlarge {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  transform: scale(15.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.card-container.expanded {
+  height: max-content; /* Height auto when expanded */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Hide by default */
+.hamburger-icon {
+  visibility:hidden;
+}
+
+.about-header {
+   padding-top: 2em;
+ }
+
+/***arrow icon***/
+.up-arrow {
+  position: fixed;
+  margin-right: 43%;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;  /* ensure it's above other items on the page */
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.up-arrow.show {
+  opacity: 1;
+  visibility: visible;
+  color:  rgb(235, 105, 7);
+
+}
+
+.about-txt{
+ text-align: center;
+ border: 1px solid black;
+ margin-left: auto ;
+ margin-right: auto;
+}
+}
+
+/***********************************ipad mini 768px surface pro 7 912px***/
+@media screen and (min-width: 768px) and (max-width: 910px) {
+   /*landing page image*/
+  .home-container {
+    display: flex;
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+    margin-top: 0;
+  }
+
+  /**home page image*/
+.home-img {
+  display: flex;
+  border: 1px solid black;
+  margin-bottom: 2em;
+  height: 100vh;
+}
+
+.home-footer{
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* Hide by default */
+.hamburger-icon {
+  visibility:hidden;
+}
+
+nav {
+  border-bottom: 2px solid black; 
+  text-align: center;
+  top: 0;
+  min-width: 100%;
+  background:#f96211;
+  position: sticky;
+  z-index: 2;
+  overflow: hidden;
+}
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  nav li {
+    display: inline-block;
+    color: black;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: rgb(4, 4, 152);
+    font-weight: bold;
+    padding: 5px 12px;
+  }
+
+  nav a:hover {
+    background: black;
+    color: white;
+    border-radius: 6px;
+  }
+
+  /*landing page image*/
+  .home-container {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  h1 {
+    text-align: center;
+ }
+ 
+ /*card container*/
+.services-grid {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: .5em;
+  margin: 4em .5em 1em .5em;
+  max-width: max-content;
+} 
+
+  /*card content title, price & details*/
+.card-container  {
+  height:auto;
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  border-radius: 20px;
+  border: rgb(235, 105, 7) solid 2px;
+  overflow: hidden;
+}
+
+/*initial card dimensions*/
+.card-container {
+  margin: 1em .1em 2em .19em;
+  height:360px;
+  width: auto;
+}
+}
+
+                                                                                                    /**************s20 mobile-breakpoint **********/ 
+@media screen and (min-width: 360px) and (max-width: 420px) {
   .hamburger-icon {
     display: flex;
   }
@@ -274,6 +486,7 @@ body {
     width: auto;
     opacity: 0;
     overflow: hidden;
+    margin: 0 1em 0 1em;
     transition: all 3s ease-in-out;
   }
 
@@ -293,7 +506,8 @@ body {
 
 h3 {
   text-align: center;
-    color: black;
+  color: black;
+  padding: 0 2em 0 2em;
 }
 
 h1 {
@@ -305,7 +519,7 @@ h1 {
 }
 
 
-  /*landing page image*/
+/*landing page image*/
 .home-container {
   display: flex;
   flex-direction:row;
@@ -313,10 +527,9 @@ h1 {
   height: auto;
   object-fit: cover;
   overflow: hidden;
-  margin-top: 0;
   }
 
-  /*card container*/
+/*card container*/
 .services-grid {
   display: grid;
   grid-template-columns:100%;
@@ -408,25 +621,26 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   margin: 2em 0 2em 0;
-  border: black 1px solid;
 }
 
+/*images container*/
 .image-item img {
-  display: flex;
   width: 100%;
-  height: auto;
+  height: 100%;
+  margin-bottom: .1em;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .img-container {
   display: flex;
   flex-direction: column;
-  margin-top: 5em;
   width: auto;
-  text-align: center;
 }
 
 .compact-location {
-  margin: 2em 0 2em 0;
+  margin-top: 2em;
+  text-align: center;
 }
 
 .up-arrow {
