@@ -1,10 +1,11 @@
-@media screen and (min-width:2560px) and (max-width: 51200px){
+@media screen and (min-width:1696px) and (max-width: 51200px){
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
   background-color: #eaddee3a;
 }
+
 .service-header-format{
   margin-top: 1em;  
   text-align: center;
@@ -14,10 +15,15 @@ body {
   text-align: center;
 }
 
+ .about-header {
+  padding-top: 2em;
+}
+
 .about-txt{
   padding-top: 3em;
-  padding-left: 25em;
-  padding-right:25em;
+  font-size: 1.5em;
+  padding-left: 10em;
+  padding-right:10em;
   text-align: center;
 }
  .price-text {
@@ -75,22 +81,29 @@ body {
   100% { transform: scale(1.2) translate(0, 0); }
 }
 
-/*service card displays*/
+/*-------------------------------------------------------------------------------------service card displays*/
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  margin: 4em 2em 1em 1em;
-  max-width: max-content;
+  grid-template-columns: repeat(4, 330px);
+  width: fit-content;
+  padding: 2% 2% 0 2% ;
+  margin-left: 18%;
 } 
+
+.spa-service-header {
+  margin-top: 4em;
+}
+
 .card-container {
   transition: all 0.3s ease-in-out;
   overflow: hidden;
-  margin: 5em 1em 1em 3em;
+  margin: 1em 1em 11em 1em;
   height: 400px;
   width: auto;
   border-radius: 20px;
   border: rgb(235, 105, 7) solid 2px;
   cursor: pointer;
+
 }
 
 .card-container.expanded {
@@ -98,12 +111,13 @@ body {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/*card formatting*/
+/*card info formatting*/
 .card-container .MuiCardContent-root {
   min-height: 800px;
   height: auto;
   text-align: center;
   margin-top: 2em;
+  
 }
 
 /*photo gallery container*/
@@ -137,41 +151,43 @@ body {
   width: 100%;
 }
 
- .about-header {
-  padding-top: 2em;
-}
 
  .gallery-container {
    margin-top: 8em;
  }
-  /*landing page image*/
-  .home-container {
-    display: flex;
-    flex-direction:row;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    overflow: hidden;
-    margin-top: 0;
-  }
 
-  ul {
-    list-style: none;
-  }
+/*landing page image*/
+.home-container {
+  display: flex;
+  flex-direction:row;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+  margin-top: 0;
+}
+.home-footer{
+  display: grid;
+  text-align: center;
+  margin-bottom: 1em;
+}
 
-  .child-container {
-    text-align: left;
-    font-size:14pt;
-    margin-top: 8em;
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 50%;
-  }
+ul {
+  list-style: none;
+}
+
+.child-container {
+  text-align: left;
+  font-size:14pt;
+  margin-top: 8em;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 50%;
+}
 
   /*description section*/
   .txt-formatted {
-    margin-top: 6em;
-    font-size:16px;
+    margin-top: 100px;
     text-align:center;
   }
 
@@ -225,10 +241,6 @@ body {
   color: #61dafb;
 }
 
-.spa-service-header {
-  margin-top: 8em;
-}
-  
 .compact-location {
   margin: 2em 1em 2em 1em;
 }
@@ -237,10 +249,28 @@ body {
 .hamburger-icon {
   visibility:hidden;
 }
+
+/*uparrow icon*/
+.up-arrow {
+  position: fixed;
+  margin: 40em 0 0 35em;
+  z-index: 99;  /* ensure it's above other items on the page */
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
 }
 
-/***********************************************ipad pro 1024px***/
-@media screen and (min-width:920px) and (max-width: 1024px) {
+/*uparrow visibility*/
+.up-arrow.show {
+  opacity: 1;
+  visibility: visible;
+  color:  rgb(235, 105, 7);
+}
+}
+
+/************************************************************************************ipad pro 1024px***/
+@media screen and (min-width:920px) and (max-width: 1026px) {
     nav {
     border-bottom: 2px solid black; 
     text-align: center;
@@ -256,6 +286,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding-bottom: 20px;
+    font-size: 22px;
   }
 
   nav li {
@@ -306,21 +337,26 @@ body {
   max-width: max-content;
 }
 
+.spa-service-header {
+  margin-top: 4em;
+  text-align: center;
+}
+
 /*card content title, price & details*/
 .card-container  {
-  height:auto;
+  /*height:auto;*/
   text-align: center;
-  display: flex;
-  flex-direction:column;
+  /*display: flex;
+  flex-direction:column;*/
   border-radius: 20px;
   border: rgb(235, 105, 7) solid 2px;
-  overflow: hidden;
+  overflow:hidden;
 }
 
 /*initial card dimensions*/
 .card-container {
-  margin: 1em 1em 2em 1em;
-  height:380px;
+  margin: 2em 1.5em 2em 1.5em;
+  height:370px;
   width: auto;
 }
 
@@ -329,10 +365,15 @@ body {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.paw-print {
+  height: 50%;
+  width: 50%;
+}
+
 /*more details text on cards*/
 .color-text {
   color:  rgb(235, 105, 7);
-  padding-top: 2em;
+  padding-top: 1.5em;
 }
 
 /*gallery-container*/
@@ -411,6 +452,12 @@ body {
 
 }
 
+.home-footer{
+  display: grid;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 .about-txt{
  text-align: center;
  border: 1px solid black;
@@ -426,7 +473,7 @@ body {
 }
 
 /***********************************ipad mini 768px surface pro 7 912px***/
-@media screen and (min-width: 768px) and (max-width: 910px) {
+@media screen and (min-width: 768px) and (max-width: 912px) {
    /*landing page image*/
   .home-container {
     display: flex;
@@ -519,7 +566,7 @@ h1 {
 
 /*initial card dimensions*/
 .card-container {
-  margin: 1em .8em 2em .8em;
+  margin: 1em 9em 2em 9em;
   height:300px;
   width: auto;
 }
@@ -649,11 +696,18 @@ h1 {
 .home-container {
   display: flex;
   flex-direction:row;
-  width: auto;
-  height: auto;
   object-fit: cover;
   overflow: hidden;
   }
+
+  .home-img {
+  display: flex;
+  border: 1px solid black;
+  margin-bottom: 2em;
+  height: 90vh;
+  width: 100%;
+  }
+
 
 /*card container*/
 .services-grid {
@@ -711,13 +765,6 @@ h1 {
   padding-top: 1px;
 }
 
-.home-img {
-  display: flex;
-  border: 1px solid black;
-  margin-bottom: 2em;
-  height: 90vh;
-  width: 100%;
-  }
 
 .service-header {
   text-align: center;
@@ -739,6 +786,12 @@ h1 {
 
 .spa-service-header {
   margin-bottom: 2em;
+}
+
+.home-footer {
+  display: grid;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 /*mobile gallery view*/

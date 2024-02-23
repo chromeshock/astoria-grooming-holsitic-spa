@@ -1,13 +1,13 @@
 import React, {useState, useEffect } from 'react';
 import ServiceCard from './ServicesCard';
-import descriptions from './Descriptions';
+import descriptions from './descriptions';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 
 const services = [
     //1st row
         { name: 'Cat Claw Trim', details: 'No further details', price: '$30', duration: '30 min', descriptions:'' },
-        { name: 'Nail Clipper for dogs',  details: 'No further details', price: '$15', duration: '10 min', descriptions: '' },  
+        { name: "Dog Claw Trim",  details: 'No further details', price: '$15', duration: '10 min', descriptions: '' },  
         { name: 'Clean Ears', price: '$15', duration: '15 min', details: 'No further details', descriptions: ''  },
         { name: 'Paws Clean', details: 'Click for more details', price: '$20', duration: '30 min', descriptions: descriptions.fullSpaDogs  },
    //2nd row
@@ -78,13 +78,15 @@ const ServicesComponent = () => {
   };
 
   return (
-    <div className="services-grid">
-      <h1 className='spa-service-header '>Spa Services</h1>
-      {services.map((service, index) => (
-        <ServiceCard key={index} service={service} />
-      ))}
-      <div className={`up-arrow ${showScroll ? 'show' : ''}`} onClick={scrollToTop}>
-        <ArrowUpwardIcon />
+    <div className='spa-service-header'><h1>Spa Services</h1>
+      <div className="services-grid">
+        
+        {services.map((service, index) => (
+          <ServiceCard key={index} service={service} />
+        ))}
+        <div className={`up-arrow ${showScroll ? 'show' : ''}`} onClick={scrollToTop}>
+          <ArrowUpwardIcon />
+        </div>
       </div>
     </div>
   );
